@@ -1,0 +1,543 @@
+:root {
+  --primary-color: #e95a08;
+  --hover-color: #d44c07;
+  --text-black-50: rgba(2, 2, 2, 0.521);
+  --primary-font: 'Inter';
+  --secondary-font: 'Noto Serif';
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  transition: 0.3s ease;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+  color: var(--text-black-50);
+  line-height: normal;
+}
+
+h1,
+.h1 {
+  font-family: var(--secondary-font);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f8ff;
+}
+
+.test-border {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.mid-80 {
+  width: 80%;
+}
+
+.inline-child {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.nav-section-left img {
+  width: 200px;
+  height: auto;
+}
+
+.nav-section-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+  color: var(--text-black-50);
+}
+
+.nav-item.font-bold {
+  color: black;
+}
+
+.nav-item img {
+  width: 30px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.each-section {
+  margin-top: 20vh;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.banner-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner-right img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plants-header {
+  text-align: center;
+}
+
+.plants-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.plants-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plants-card img {
+  width: 100%;
+  margin: 10px;
+  height: auto;
+}
+
+.plants-card span {
+  margin: 5px;
+  font-size: 1.2rem;
+}
+
+.plants-card button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.plants-card button:hover {
+  background-color: var(--hover-color);
+}
+
+.plant-lover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.plant-lover-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.lower-img img {
+  width: 90%;
+}
+
+.upper-img img {
+  width: 50%;
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+  animation: spin 20s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.plant-lover-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.plant-lover-right li {
+  font-size: 1.2rem;
+}
+
+.latest-deals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.latest-deals-desc {
+  text-align: center;
+  width: 66%;
+}
+
+.deals-cards {
+  display: grid;
+  width: 100%;
+  margin-top: 10vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+#bloom-deal,
+#ana-deal,
+#zabo-deal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f5f8ff;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  padding: 12% 0;
+}
+
+#bloom-deal a,
+#ana-deal a,
+#zabo-deal a {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+#bloom-deal h3,
+#ana-deal h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+#bloom-deal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/deal-bloom.png');
+}
+
+#ana-deal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/deal-ana.png');
+}
+
+#zabo-deal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/deal-zabo.png');
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.join {
+  color: #f5f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 12% 0;
+  background-image: url('../assets/news-letter-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.join-form {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.join-form input[type='text'] {
+  color: var(--text-black-50);
+  width: 75%;
+  background-color: #f5f8ff;
+  padding: 0.75rem;
+  border: none;
+}
+
+.join-form input[type='text']:focus {
+  outline: none;
+}
+
+.join-form input[type='button'] {
+  width: 25%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 0;
+  border: none;
+  cursor: pointer;
+}
+
+.join-form input[type='button']:hover {
+  background-color: var(--hover-color);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.footer-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-left img {
+  width: 200px;
+  height: auto;
+}
+
+.footer-mid {
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5vh;
+  grid-auto-flow: column;
+}
+
+.footer-mid a {
+  color: var(--text-black-50);
+  text-decoration: none;
+}
+
+.footer-mid a:hover {
+  color: var(--primary-color);
+}
+
+.footer-right {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-right img {
+  width: 40px;
+  height: auto;
+  margin: 0 13px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 2.75vw;
+  }
+
+  h1, .h1,
+  h2, .h2 {
+    font-size: 2rem;
+  }
+
+  .mid-80 {
+    width: 100%;
+  }
+
+  .nav-bar {
+    margin: 1.5rem;
+  }
+
+  .nav-section-left img {
+    width: 100px;
+  }
+
+  .nav-item:not(:last-child) {
+    display: none;
+  }
+
+  .each-section {
+    margin-top: 10vw;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+
+  .banner-left {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .banner-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .plants {
+    padding: 0 1rem;
+  }
+
+  .plants-header {
+    width: 90%;
+  }
+
+  .plants-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plant-lover {
+    flex-direction: column;
+    padding: 0 1rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .plant-lover-left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .lower-img img {
+    width: 100%;
+  }
+
+  .upper-img {
+    display: none;
+  }
+
+  .plant-lover-right {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+
+  .latest-deals {
+    margin-top: 12rem;
+    padding: 0 1rem;
+  }
+
+  .latest-deals-desc {
+    width: 90%;
+  }
+
+  .deals-cards {
+    display: block;
+    margin-top: 3rem;
+  }
+
+  #bloom-deal,
+  #ana-deal,
+  #zabo-deal {
+    padding: 16% 0;
+    margin-bottom: 1rem;
+    border-radius: 18px;
+  }
+
+  .join-form {
+    width: 85%;
+  }
+
+  .join-form input[type='text'],
+  .join-form input[type='button'] {
+    font-size: 1.33rem;
+    padding: 1.3rem;
+  }
+
+  .footer {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .footer-left,
+  .footer-mid,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-left p,
+  .footer-mid a {
+    font-size: 1.5rem;
+  }
+
+  .footer-mid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 3vh;
+  }
+
+  .footer-right {
+    justify-content: flex-start;
+  }
+
+  .footer-right img {
+    margin: 3vh 20px 0 0;
+  }
+}
